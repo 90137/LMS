@@ -6,8 +6,8 @@ RUN mvn clean package -DskipTests
 
 FROM openjdk:17.0.1-jdk-slim
 
-COPY --from=build/target/SpringBootWebMVCJPAProject-0.0.1-SNAPSHOT.jar demo.ja
+COPY --from=build/target/springbootwebmvcjpaproject-0.0.1-SNAPSHOT.jar demo.ja
 
 EXPOSE 8880
 
-ENTRYPOINT ["java","-jar","SpringBootWebMVCJPAProject.jar"]
+ENTRYPOINT ["java","-jar","springbootwebmvcjpaproject.jar"]
