@@ -111,7 +111,7 @@ public class ClientController
         String uname = request.getParameter("uname");
         String pwd = request.getParameter("pwd");
 
-        Admin admin = adminService.checkadminlogin(uname, pwd);
+		Admin admin = adminService.checkadminlogin(uname, pwd);
 
         if(admin != null)
         {

@@ -1,315 +1,716 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
 
-<link type="text/css" rel="stylesheet" href="css/style.css">
- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-<style>
-.style-33 {
-            padding-top: 75px;
-            padding-bottom: 75px;
-            background-color: rgb(255, 255, 255);
-            background-position: 50% 50%;
-            background-repeat: no-repeat;
-            background-size: cover;
-            position: relative;
-            overflow-wrap: break-word;
-            box-sizing: border-box;
-        }
+    <meta charset="UTF-8">
 
-        .style-34 {
-            padding-left: 16px;
-            padding-right: 16px;
-            max-width: 1220px;
-            position: relative;
-            overflow-wrap: break-word;
-            box-sizing: border-box;
-            width: 100%;
-            margin-right: auto;
-            margin-left: auto;
-        }
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-        .style-35 {
-            margin-left: -16px;
-            margin-right: -16px;
-            align-items: center;
-            justify-content: space-between;
-            display: flex;
-            flex-wrap: wrap;
-            box-sizing: border-box;
-            --bs-gutter-x: 1.5rem;
-            --bs-gutter-y: 0;
-            margin-top: 0px;
-        }
+    <title>Learning Management System</title>
 
-        .style-36 {
-            padding-left: 16px;
-            padding-right: 16px;
-            flex: 0 0 auto;
-            width: 50%;
-            box-sizing: border-box;
-            flex-shrink: 0;
-            max-width: 100%;
-            margin-top: 0px;
-        }
 
-        .style-37 {
-            max-width: 554px;
-            box-sizing: border-box;
-        }
+    <!-- Google Font -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
 
-        .style-38 {
-            font-size: 70px;
-            width: 100%;
-            text-align: left;
-            margin-bottom: 24px;
-            line-height: 81.97px;
-            font-family: 'Space Grotesk', sans-serif;
-            word-break: break-word;
-            overflow-wrap: break-word;
-            font-weight: 400;
-            font-style: normal;
-            margin-top: 0px;
-            box-sizing: border-box;
-        }
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
 
-        .style-39 {
-            font-weight: 700;
-            box-sizing: border-box;
-        }
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
 
-        .style-40 {
-            font-size: 18px;
-            color: rgb(140, 140, 149);
-            margin-bottom: 36px;
-            font-family: 'Lato', sans-serif;
-            line-height: 27px;
-            word-break: break-word;
-            overflow-wrap: break-word;
-            font-weight: 400;
-            font-style: normal;
-            margin-top: 0px;
-            box-sizing: border-box;
-        }
-        
-        .style-41 {
-            box-sizing: border-box;
-        }
 
-        .style-42 {
-            width: auto;
-            display: inline-block;
-            margin-left: -9.6px;
-            margin-right: -9.6px;
-            font-size: 0px;
-            box-sizing: border-box;
-        }
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-        .style-43 {
-            font-size: 18px;
-            margin-top: 20px;
-            line-height: 20px;
-            transform-style: preserve-3d;
-            transition: color 0.35s ease 0s, transform 0.3s ease 0s, border 0.3s ease 0s, background-color 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
-            margin-bottom: 0px;
-            box-shadow: none;
-            font-weight: 400;
-            border-radius: 100px;
-            background-color: #fe9901;
-            border-color: #fe9901;
-            color: rgb(0, 0, 0);
-            padding: 24px 40px;
-            font-family: 'Space Grotesk', sans-serif;
-            border-width: 1px;
-            font-style: normal;
-            margin: 20px 9.6px 0px;
-            white-space: normal;
-            display: inline-flex;
-            -webkit-box-align: center;
-            align-items: center;
-            -webkit-box-pack: center;
-            justify-content: center;
-            word-break: break-word;
-            text-decoration: none solid rgb(0, 0, 0);
-            cursor: pointer;
-            overflow-wrap: break-word;
-            box-sizing: border-box;
-            text-align: center;
-            vertical-align: middle;
-            user-select: none;
-            border: 1px solid rgb(254, 219, 1);
-        }
 
-        .style-44 {
-            font-size: 18px;
-            margin-top: 20px;
-            line-height: 20px;
-            transform-style: preserve-3d;
-            transition: color 0.35s ease 0s, transform 0.3s ease 0s, border 0.3s ease 0s, background-color 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
-            margin-bottom: 0px;
-            box-shadow: none;
-            background: rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box;
-            border: 1px solid rgb(226, 227, 233);
-            color: rgb(20, 20, 43);
-            font-weight: 400;
-            border-radius: 100px;
-            background-color: #f68600;
-            border-color: rgb(226, 227, 233);
-            padding: 24px 40px;
-            font-family: 'Space Grotesk', sans-serif;
-            border-width: 1px;
-            font-style: normal;
-            margin: 20px 9.6px 0px;
-            white-space: normal;
-            display: inline-flex;
-            -webkit-box-align: center;
-            align-items: center;
-            -webkit-box-pack: center;
-            justify-content: center;
-            word-break: break-word;
-            text-decoration: none solid rgb(20, 20, 43);
-            cursor: pointer;
-            overflow-wrap: break-word;
-            box-sizing: border-box;
-            text-align: center;
-            vertical-align: middle;
-            user-select: none;
-        }
+    <!-- Bootstrap -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 
-        .style-45 {
-            padding-left: 16px;
-            padding-right: 16px;
-            flex: 0 0 auto;
-            width: 41.6667%;
-            box-sizing: border-box;
-            flex-shrink: 0;
-            max-width: 100%;
-            margin-top: 0px;
-        }
 
-        .style-46 {
-            padding: 45px 0px;
-            background-color: rgb(239, 240, 246);
-            box-sizing: border-box;
-        }
+    <!-- Main CSS -->
+    <link rel="stylesheet"
+          href="${pageContext.request.contextPath}/css/style.css">
 
-        .style-47 {
-            position: relative;
-            right: 40px;
-            display: block;
-            width: 100%;
-            vertical-align: middle;
-            box-sizing: border-box;
-        }
-        
-      .card.mb-3 {
-            margin-bottom: 3px;
-        }   
-
- .right-container {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            height: 50vh;
-        }
-        
-         
-</style>
 </head>
+
+
 <body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
-
-<%@ include file="navbar.jsp" %> 
 
 
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
 
-<section data-bs-version="5.1" class="style-33">
+<jsp:include page="navbar.jsp" />
 
 
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+    <!-- Background decoration -->
+    <div class="hero-grid"></div>
 
 
-        <div class="style-34">
-            <div class="style-35">
-                <div class="style-36">
-                    <div class="style-37">
-                        <h5 class="style-38">
-                            <strong class="style-39">Student Learning Portal</strong>
-                        </h5>
-                        <p class="style-40">
-                            <b>Learn wherever and whenever!!!</b>
-                        </p>
-                        <div class="style-41">
-                            <div class="style-42"><a class="style-43" href="subscription">Subscribe</a><a class="style-44" href="explore">Explore</a></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="style-45">
-                    <div class="style-46">
-                        <img src="https://i.pinimg.com/originals/74/47/04/7447042a41a9bff1f39695ec4287c774.gif" alt="" class="style-47" />
-                    </div>
-                </div>
+    <div class="hero-container">
+
+
+        <!-- ================= LEFT ================= -->
+
+        <div class="hero-content">
+
+
+            <!-- Badge -->
+
+            <div class="hero-badge">
+
+                <i class="fa-solid fa-graduation-cap"></i>
+
+                <span>LEARNING MANAGEMENT SYSTEM</span>
+
             </div>
-        </div>
-    </section>
 
- 
-<div class="right-container">
-        <div class="card mb-3" style="max-width: 750px;">
-            <div class="row g-0">
-                <div class="col-md-4">
-                    <img src="https://i.pinimg.com/originals/cc/b2/82/ccb282af38fdb09cf4589356b8bc4767.gif"
-                       alt="Trendy Pants and Shoes" class="img-fluid rounded-start" />
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title">Learning </h5>
-                      <li> Learning content delivery<br>
-<li>Learners’ profiles with contact data, information about courses, exams, certificates, and more.<br>
-<li>AI-driven personalized learning paths.<br>
-<li>Online assignments for learners.<br>
-                       
-                    </div>
-                </div>
+
+            <!-- Heading -->
+
+            <h1>
+
+                Learn.
+                <span>Grow.</span>
+                Achieve.
+
+            </h1>
+
+
+            <!-- Description -->
+
+            <p>
+
+                A modern platform designed to make learning,
+                teaching and academic management simple —
+                all in one place.
+
+            </p>
+
+
+            <!-- Buttons -->
+
+            <div class="hero-buttons">
+
+
+                <a href="${pageContext.request.contextPath}/studentlogin"
+                   class="btn-primary-custom">
+
+                    Start Learning
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+
+                <a href="#portals"
+                   class="btn-secondary-custom">
+
+                    Explore Portals
+
+                    <i class="fa-solid fa-compass"></i>
+
+                </a>
+
             </div>
+
+
+            <!-- Small trust text -->
+
+            <div class="hero-note">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                Simple
+
+                <span>•</span>
+
+                Secure
+
+                <span>•</span>
+
+                Easy to use
+
+            </div>
+
+
         </div>
+
+
+
+        <!-- ================= RIGHT ================= -->
+
+        <div class="hero-card-area">
+
+
+            <div class="main-learning-card">
+
+
+                <!-- Card Header -->
+
+                <div class="learning-card-header">
+
+                    <div class="learning-icon">
+
+                        <i class="fa-solid fa-graduation-cap"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <small>WELCOME TO</small>
+
+                        <h3>Learning Portal</h3>
+
+                    </div>
+
+                </div>
+
+
+                <div class="card-divider"></div>
+
+
+                <!-- Courses -->
+
+                <div class="learning-item">
+
+                    <div class="learning-item-icon purple">
+
+                        <i class="fa-solid fa-book-open"></i>
+
+                    </div>
+
+
+                    <div class="learning-item-text">
+
+                        <strong>Courses</strong>
+
+                        <span>
+                            Explore available courses
+                        </span>
+
+                    </div>
+
+
+                    <i class="fa-solid fa-chevron-right arrow"></i>
+
+                </div>
+
+
+                <!-- Materials -->
+
+                <div class="learning-item">
+
+                    <div class="learning-item-icon blue">
+
+                        <i class="fa-solid fa-video"></i>
+
+                    </div>
+
+
+                    <div class="learning-item-text">
+
+                        <strong>Learning Materials</strong>
+
+                        <span>
+                            Videos, notes and resources
+                        </span>
+
+                    </div>
+
+
+                    <i class="fa-solid fa-chevron-right arrow"></i>
+
+                </div>
+
+
+                <!-- Progress -->
+
+                <div class="learning-item">
+
+                    <div class="learning-item-icon green">
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                    </div>
+
+
+                    <div class="learning-item-text">
+
+                        <strong>Track Progress</strong>
+
+                        <span>
+                            Monitor your academic progress
+                        </span>
+
+                    </div>
+
+
+                    <i class="fa-solid fa-chevron-right arrow"></i>
+
+                </div>
+
+
+                <!-- Bottom -->
+
+                <div class="learning-status">
+
+                    <span>
+
+                        <i class="fa-solid fa-circle"></i>
+
+                        Platform ready
+
+                    </span>
+
+
+                    <strong>24/7</strong>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
     </div>
 
+</section>
 
 
-<div class="card mb-3" style="max-width: 750px;">
-  <div class="row g-0">
-    <div class="col-md-4" max-height="100px">
-      <video src="mainvideo.mp4" max-height="50px" class="img-fluid rounded-start" autoplay muted loop ></video>
-    
+
+<!-- =====================================================
+     STATISTICS
+===================================================== -->
+
+<section class="stats-section">
+
+
+    <div class="stats-container">
+
+
+        <!-- Courses -->
+
+        <div class="stat-box">
+
+            <div class="stat-icon purple-bg">
+
+                <i class="fa-solid fa-book"></i>
+
+            </div>
+
+
+            <div>
+
+                <strong>50+</strong>
+
+                <span>Courses</span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Students -->
+
+        <div class="stat-box">
+
+            <div class="stat-icon blue-bg">
+
+                <i class="fa-solid fa-user-graduate"></i>
+
+            </div>
+
+
+            <div>
+
+                <strong>500+</strong>
+
+                <span>Students</span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Faculty -->
+
+        <div class="stat-box">
+
+            <div class="stat-icon green-bg">
+
+                <i class="fa-solid fa-chalkboard-user"></i>
+
+            </div>
+
+
+            <div>
+
+                <strong>50+</strong>
+
+                <span>Faculty</span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Access -->
+
+        <div class="stat-box">
+
+            <div class="stat-icon orange-bg">
+
+                <i class="fa-solid fa-clock"></i>
+
+            </div>
+
+
+            <div>
+
+                <strong>24/7</strong>
+
+                <span>Access</span>
+
+            </div>
+
+        </div>
+
+
     </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title"></h5>
-        <p class="card-text">
-         <h2
-         ><b><center> Learning content management</b></center></h2>
-<li>
-      Support of multilingual content.<br>
-     <li> Support of multiple content types (e.g., text, audio, images, video, animation, VR).<br>
-      <li>User-generated content.<br>
-     <li> Structured storage of learning materials.<br>
-      
- </li>
+
+</section>
+
+
+
+<!-- =====================================================
+     PORTALS
+===================================================== -->
+
+<section class="portals-section"
+         id="portals">
+
+
+    <!-- Heading -->
+
+    <div class="section-heading">
+
+
+        <span class="section-label">
+
+            GET STARTED
+
+        </span>
+
+
+        <h2>
+
+            Choose your portal
+
+        </h2>
+
+
+        <p>
+
+            Select the portal that matches your role.
+
         </p>
-        <p class="card-text">
-          <small class="text-muted">Learnalite</small>
-        </p>
-      </div>
+
+
     </div>
-  </div>
-</div>
 
-<br>
 
+
+    <!-- Portal Cards -->
+
+    <div class="portal-container">
+
+
+        <!-- =================================================
+             STUDENT
+        ================================================== -->
+
+        <a href="${pageContext.request.contextPath}/studentlogin"
+           class="portal-card">
+
+
+            <div class="portal-top">
+
+
+                <div class="portal-icon student-icon">
+
+                    <i class="fa-solid fa-user-graduate"></i>
+
+                </div>
+
+
+                <span class="portal-number">
+
+                    01
+
+                </span>
+
+            </div>
+
+
+            <h3>
+
+                Student
+
+            </h3>
+
+
+            <p>
+
+                Access courses, learning materials,
+                assignments and your academic activities.
+
+            </p>
+
+
+            <div class="portal-button">
+
+                <span>Student Login</span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </div>
+
+
+        </a>
+
+
+
+        <!-- =================================================
+             FACULTY
+        ================================================== -->
+
+        <a href="${pageContext.request.contextPath}/emplogin"
+           class="portal-card">
+
+
+            <div class="portal-top">
+
+
+                <div class="portal-icon faculty-icon">
+
+                    <i class="fa-solid fa-chalkboard-user"></i>
+
+                </div>
+
+
+                <span class="portal-number">
+
+                    02
+
+                </span>
+
+            </div>
+
+
+            <h3>
+
+                Faculty
+
+            </h3>
+
+
+            <p>
+
+                Manage courses, learning materials,
+                assignments and student activities.
+
+            </p>
+
+
+            <div class="portal-button">
+
+                <span>Faculty Login</span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </div>
+
+
+        </a>
+
+
+
+        <!-- =================================================
+             ADMIN
+        ================================================== -->
+
+        <a href="${pageContext.request.contextPath}/adminlogin"
+           class="portal-card">
+
+
+            <div class="portal-top">
+
+
+                <div class="portal-icon admin-icon">
+
+                    <i class="fa-solid fa-user-shield"></i>
+
+                </div>
+
+
+                <span class="portal-number">
+
+                    03
+
+                </span>
+
+            </div>
+
+
+            <h3>
+
+                Admin
+
+            </h3>
+
+
+            <p>
+
+                Manage users, courses and the
+                overall Learning Management System.
+
+            </p>
+
+
+            <div class="portal-button">
+
+                <span>Admin Login</span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </div>
+
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+
+    <div class="footer-container">
+
+
+        <!-- Brand -->
+
+        <div class="footer-brand">
+
+
+            <div class="footer-logo">
+
+                <i class="fa-solid fa-graduation-cap"></i>
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    Learning Management System
+                </strong>
+
+                <span>
+                    Learn. Grow. Achieve.
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- Links -->
+
+        <div class="footer-links">
+
+
+            <a href="${pageContext.request.contextPath}/">
+
+                Home
+
+            </a>
+
+
+            <a href="${pageContext.request.contextPath}/adminlogin">
+
+                Admin
+
+            </a>
+
+
+            <a href="${pageContext.request.contextPath}/emplogin">
+
+                Faculty
+
+            </a>
+
+
+            <a href="${pageContext.request.contextPath}/studentlogin">
+
+                Student
+
+            </a>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="footer-bottom">
+
+        © 2026 Learning Management System
+
+    </div>
+
+
+</footer>
+
+
+
+<!-- Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
 
 
 </body>
 
 </html>
-
- 
